@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rag pfe v1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db24349d26369548350f9e454e89db3884963af4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rag pfe v1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rag pfe v1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

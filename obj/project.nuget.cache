@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "QIbKwyUSuDA=",
+  "dgSpecHash": "OFmxjC62fkY=",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Desktop\\Abdelwaheb\\PFE\\RAG\\Rag pfe v1\\Rag pfe v1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\fastberttokenizer\\1.0.28\\fastberttokenizer.1.0.28.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\google.protobuf\\3.29.3\\google.protobuf.3.29.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\grpc.core.api\\2.67.0\\grpc.core.api.2.67.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\grpc.net.client\\2.67.0\\grpc.net.client.2.67.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\grpc.net.common\\2.67.0\\grpc.net.common.2.67.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.2\\microsoft.extensions.configuration.9.0.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.2\\microsoft.extensions.configuration.abstractions.9.0.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.2\\microsoft.extensions.configuration.binder.9.0.2.nupkg.sha512",
@@ -22,7 +28,13 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.options\\9.0.2\\microsoft.extensions.options.9.0.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.2\\microsoft.extensions.options.configurationextensions.9.0.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.2\\microsoft.extensions.primitives.9.0.2.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\pdfpig\\0.1.10-alpha-20250224-f26e7\\pdfpig.0.1.10-alpha-20250224-f26e7.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.ml.onnxruntime\\1.20.1\\microsoft.ml.onnxruntime.1.20.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.20.1\\microsoft.ml.onnxruntime.managed.1.20.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\pdfpig\\0.1.10-alpha-20250224-f26e7\\pdfpig.0.1.10-alpha-20250224-f26e7.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\qdrant.client\\1.13.0\\qdrant.client.1.13.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.linq.async\\6.0.1\\system.linq.async.6.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.numerics.tensors\\9.0.2\\system.numerics.tensors.9.0.2.nupkg.sha512"
   ],
   "logs": []
 }

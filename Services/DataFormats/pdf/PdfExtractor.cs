@@ -42,6 +42,7 @@ public sealed class PdfExtractor : IContentDecoder
    
     public Task<FileContent> DecodeAsync(Stream data, CancellationToken cancellationToken = default)
     {
+            
         this._log.LogDebug("Extracting text from PDF file");
 
         var result = new FileContent(MimeTypes.PlainText);

@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FastBertTokenizer": {
+              "target": "Package",
+              "version": "[1.0.28, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -64,9 +68,25 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
+            "Microsoft.ML.OnnxRuntime": {
+              "target": "Package",
+              "version": "[1.20.1, )"
+            },
             "PdfPig": {
               "target": "Package",
               "version": "[0.1.10-alpha-20250224-f26e7, )"
+            },
+            "Qdrant.Client": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
+            "System.Linq.Async": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "System.Numerics.Tensors": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [
