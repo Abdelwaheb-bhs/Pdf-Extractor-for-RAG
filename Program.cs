@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using Nexia.Memory;
 using Nexia.Embeddings;
 using Nexia.Qdrant;
+using Nexia.DataFormats.Pdf;
+using Nexia.DataFormats;
+using System.Net.Mime;
 
 class Program
 {
@@ -25,7 +28,7 @@ class Program
         var memoryStore = new QdrantMemoryStore(httpClient, vectorSize: 384, qdrantEndpoint);
         var memory = new NexiaMemory(memoryStore, embeddingService);
 
-        string pdfPath = "Little-Prince-final-text.pdf";
+        string pdfPath = "test.pdf";
         if (!await IsDocumentProcessed(memory, collectionName, pdfPath))
         {
             Console.WriteLine("Processing PDF for the first time...");
@@ -60,28 +63,24 @@ class Program
 
     static async Task IngestPdf(NexiaMemory memory, string collectionName, string pdfPath)
     {
-        using var pdf = PdfDocument.Open(pdfPath);
-        string text = string.Join(" ", pdf.GetPages().Select(p => p.Text));
-
-        var chunks = text.Split(new[] { ". " }, StringSplitOptions.RemoveEmptyEntries)
-            .Select(c => c.Trim() + ".").Where(c => c.Length > 20);
-
+        PdfExtractor extractor = new PdfExtractor();
+        FileContent content = await extractor.DecodeAsync(pdfPath);
         int id = 0;
-        foreach (var chunk in chunks)
+        foreach (var section in content.Sections)
         {
             await memory.SaveInformationAsync(
                 collection: collectionName,
-                text: chunk,
+                text: section.Content,
                 id: $"chunk_{id++}",
                 description: "PDF content chunk"
             );
-            Console.WriteLine($"Ingested: {chunk.Substring(0, Math.Min(50, chunk.Length))}...");
+            Console.WriteLine($"Ingested: {section.Content.Substring(0, Math.Min(50, section.Content.Length))}...");
         }
     }
 
     static async Task QueryRAG(NexiaMemory memory, string collectionName, string query)
 {
-    var results = memory.SearchAsync(collectionName, query, limit: 3, minRelevanceScore: 0.5);
+    var results = memory.SearchAsync(collectionName, query, limit: 3, minRelevanceScore: 0.2);
     string context = "";
     int resultCount = 0;
     await foreach (var result in results)

@@ -14,7 +14,6 @@ using UglyToad.PdfPig.DocumentLayoutAnalysis.TextExtractor;
 
 namespace Nexia.DataFormats.Pdf;
 
-[Experimental("KMEXP00")]
 public sealed class PdfExtractor : IContentDecoder
 {
     private readonly ILogger<PdfExtractor> _log;

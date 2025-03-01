@@ -1,5 +1,3 @@
-// Copyright (c) Microsoft. All rights reserved.
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -43,13 +41,7 @@ public sealed class QdrantVectorDbClient : IQdrantVectorDbClient
         this._logger = loggerFactory?.CreateLogger(typeof(QdrantVectorDbClient)) ?? NullLogger.Instance;
     }
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="QdrantVectorDbClient"/> class.
-    /// </summary>
-    /// <param name="httpClient">The <see cref="HttpClient"/> instance used for making HTTP requests.</param>
-    /// <param name="vectorSize">The size of the vectors used in the Qdrant Vector Database.</param>
-    /// <param name="endpoint">The optional endpoint URL for the Qdrant Vector Database. If not specified, the base address of the HTTP client is used.</param>
-    /// <param name="loggerFactory">The <see cref="ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+    
     public QdrantVectorDbClient(
         HttpClient httpClient,
         int vectorSize,

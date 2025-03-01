@@ -8,18 +8,15 @@ namespace Nexia.Qdrant;
 
 internal sealed class CreateCollectionRequest
 {
-    /// <summary>
-    /// The name of the collection to create
-    /// </summary>
+    
+    // The name of the collection to create
     [JsonIgnore]
     public string CollectionName { get; set; }
 
-    /// <summary>
     /// Collection settings consisting of a common vector length and vector distance calculation standard
-    /// </summary>
     [JsonPropertyName("vectors")]
     public VectorSettings Settings { get; set; }
-
+    
     public static CreateCollectionRequest Create(string collectionName, int vectorSize, QdrantDistanceType distanceType)
     {
         return new CreateCollectionRequest(collectionName, vectorSize, distanceType);
